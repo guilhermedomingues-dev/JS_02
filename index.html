@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividadea</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+</head>
+<header>
+    <h1>Atividade Avaliativa</h1>
+    <div id="btn">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+    </div>
+    <label class="switch">
+        <input onclick="darkmodeToggle()" type="checkbox">
+        <span class="slider round"></span>
+    </label>
+</header>
+
+<body>
+    <section class="grid-template-columns-4">
+        <div class="item" onclick="abrir()">1</div>
+        <div class="item" onclick="abrir()">2</div>
+        <div class="item" onclick="abrir()">3</div>
+        <div class="item" onclick="abrir()">4</div>
+        <div class="item" onclick="abrir()">5</div>
+        <div class="item" onclick="abrir()">6</div>
+        <div class="item" onclick="abrir()">7</div>
+        <div class="item" onclick="abrir()">8</div>
+    </section>
+
+    <dialog id="dialog">
+        <form action="resultado.html">
+            <label for="">Nome: </label>
+            <input type="text" required id="nome">
+            <label for="">Endereço </label>
+            <input type="text" required id="endereco">
+            <label for="">Telefone: </label>
+            <input type="tel" oninput=mascara_telefone() id="telefone" maxlength="14" required>
+            <label for="">CPF: </label>
+            <input type="text" oninput=mascara_cpf() id="cpf" maxlength="14" required>
+            <label for="">Idade: </label>
+            <input type="text" required id="idade">
+            <label for="">RG: </label>
+            <input type="text" oninput="mascara_rg()" id="rg" maxlength="12" required>
+            <input id="submit" type="submit" onclick="salvarDados()">
+        </form>
+        <button id="close" onclick="fechar()">Fechar</button>
+    </dialog>
+
+    <footer>
+        <p>&copy Guilherme Domingues</p>
+    </footer>
+    </body>
+<script src="script.js"></script>
+
+</html>
